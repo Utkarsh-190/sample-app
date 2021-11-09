@@ -14,8 +14,8 @@ const Input = ({ input }) => {
   }
 
   return (
-    <div className={classes.input}>
-      <label htmlFor={input}>{input}</label>
+    <div className={`${classes.input} ${classes.card}`}>
+      <label>{input}</label>
       {_input}
     </div>
   );
