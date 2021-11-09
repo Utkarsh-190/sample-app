@@ -1,5 +1,5 @@
 import classes from "./Body.module.css";
-// import Input from "./Input";
+import Input from "./Input";
 
 const Body = (props) => {
   const inputTypes = ["Name", "Date of birth", "Religion", "Height"];
@@ -20,9 +20,9 @@ const Body = (props) => {
         </div>
 
         <div className={classes.details}>
-          {/* {inputTypes.map((input) => {
+          {inputTypes.map((input) => {
             return <Input input={input} />;
-          })} */}
+          })}
         </div>
       </div>
     </div>
