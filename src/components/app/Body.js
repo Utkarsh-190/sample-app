@@ -1,20 +1,21 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import classes from "./Body.module.css";
 import Input from "./Input";
 import defaultProfileImage from "../../public/defaultProfileImage.jpg";
 
 const Body = (props) => {
   const inputTypes = ["Name", "Date of birth", "Religion", "Height"];
+  let [profileImage, setProfileImage] = useState(defaultProfileImage);
+  let inputImageRef = useRef(null);
 
   const logoutHandler = () => {
     props.onClick(false);
   };
 
-  let [profileImage, setProfileImage] = useState(null);
-
   const onFileChange = (event) => {
-    console.log(event);
-    // setProfileImage(event.target))
+    let uploadedImage = event.target.files[0];
+    let imageURL = URL.createObjectURL(uploadedImage);
+    setProfileImage(imageURL);
   };
 
   return (
@@ -26,13 +27,17 @@ const Body = (props) => {
 
       <div className={`${classes.body} ${classes.card}`}>
         <div className={classes.image}>
-          <img src={defaultProfileImage} alt="profile image" />
-          <input type="file" onChange={onFileChange} />
+          <input ref={inputImageRef} type="file" onChange={onFileChange} />
+          <img
+            onClick={() => inputImageRef.current.click()}
+            src={profileImage}
+            alt="profile image"
+          />
         </div>
 
         <div className={classes.details}>
           {inputTypes.map((input) => {
-            return <Input input={input} />;
+            return <Input key={input} input={input} />;
           })}
         </div>
       </div>
