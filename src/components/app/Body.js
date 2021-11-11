@@ -4,7 +4,7 @@ import Input from "./Input";
 import defaultProfileImage from "../../public/defaultProfileImage.jpg";
 
 const Body = (props) => {
-  const inputTypes = ["Name", "Date of birth", "Religion", "Height"];
+  const inputTypes = ["Name", "Date of birth", "Religion", "Height (in cm)"];
   let [profileImage, setProfileImage] = useState(defaultProfileImage);
   let inputImageRef = useRef(null);
 

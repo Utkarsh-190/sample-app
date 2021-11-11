@@ -3,13 +3,13 @@ import classes from "./Input.module.css";
 const Input = ({ input }) => {
   let _input;
 
-  if (input == "Name") {
+  if (input === "Name") {
     _input = <input type="text" />;
-  } else if (input == "Date of birth") {
+  } else if (input === "Date of birth") {
     _input = <input type="date" />;
-  } else if (input == "Religion") {
+  } else if (input === "Religion") {
     _input = <input type="text" />;
-  } else if (input == "Height") {
+  } else if (input === "Height (in cm)") {
     _input = <input type="number" />;
   }
 
