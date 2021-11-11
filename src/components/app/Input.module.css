@@ -1,14 +1,18 @@
 .input {
   height: 5rem;
-  /* width: ; ------------------ TODO : DO THIS FIRST*/
+  width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  background: white;
+  background: #f4f5f6;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.input:hover {
+  border: 1px solid #49dbf5;
 }
 
 .input > input {
