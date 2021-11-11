@@ -15,7 +15,7 @@
 .navbar {
   height: 10%;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 4rem;
   background: #e6f8fb;
   border-bottom: 1px solid #80bcd4;
   display: flex;
@@ -29,7 +29,7 @@
 
 .navbar > button {
   width: auto;
-  padding: 5px 10px;
+  padding: 5px 20px;
   background: #cef1f8;
   border: 2px solid #80bcd4;
   color: inherit;
